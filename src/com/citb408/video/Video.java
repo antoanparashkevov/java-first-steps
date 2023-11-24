@@ -49,13 +49,21 @@ public class Video {
 
     public void setDuration(BigDecimal duration) {
 
+        //compareTo returns 0, 1, or -1
+
         //the result in the if statement should return a boolean
         //BigDecimal.ZERO is a constant value from the BigDecimal class
         if( duration.compareTo(BigDecimal.ZERO) <= 0) {
             System.out.println("Invalid duration! Should be a positive number!");
-        }
-            this.duration = duration;
+        } else {
+            //or just maxDuration
+            if( Video.maxDuration.compareTo(duration) < 0 ) {
+                System.out.println("Duration is greater than Max Duration");
+            } else {
 
+                this.duration = duration;
+            }
+        }
     }
 
     //methods that are allowed to manipulate/change static props/methods are also static.
