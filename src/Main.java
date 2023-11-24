@@ -13,6 +13,10 @@ public class Main {
         Video myVideo1 = new Video(1, "Animals", BigDecimal.valueOf(20.0));
         Video myVideo2 = new Video(2, "Animals", BigDecimal.valueOf(20.0));
 
+        //Changed again
+        Video.setMaxDuration(BigDecimal.valueOf(10));
+        System.out.println(Video.getMaxDuration());
+
         //since I have another constructor with no parameters, it is possible to create an object instance like this
         Video myVideo3 = new Video(3);
 
@@ -20,10 +24,14 @@ public class Main {
 
         System.out.println(myVideo1);
         //OR
-//        System.out.println(myVideo1.toString());
+        //System.out.println(myVideo1.toString());
 
         System.out.println(myVideo2);
         System.out.println(myVideo3);//the default
+
+        //using dot notation to access the instance variables
+        System.out.println(myVideo1.name);
+        System.out.println(myVideo1.duration);
 
         System.out.println("Hello world!");
     }
