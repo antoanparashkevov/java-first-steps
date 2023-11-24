@@ -24,7 +24,11 @@ public class Video {
     public Video(int id, String n, BigDecimal d) {
         this.id = id;
         this.name = n;
-        this.duration = d;
+
+        //the validation for the duration can be here
+        //this.duration = d;
+        //or
+        setDuration(d);
     }
 
     public int getId() {

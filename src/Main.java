@@ -7,7 +7,7 @@ public class Main {
 
         //static methods are accessed by the class name
         Video.setMaxDuration(BigDecimal.valueOf(5));
-        System.out.println(Video.getMaxDuration());
+        System.out.println("Max Duration: " + Video.getMaxDuration());
 
         //When I create my own constructor, the default one gone and MUST use my own
         Video myVideo1 = new Video(1, "Animals", BigDecimal.valueOf(20.0));
@@ -15,7 +15,10 @@ public class Main {
 
         //Changed again
         Video.setMaxDuration(BigDecimal.valueOf(10));
-        System.out.println(Video.getMaxDuration());
+        System.out.println("Max Duration: " + Video.getMaxDuration());
+
+        //this will output that the Duration is greater than Max Duration
+        myVideo1.setDuration(BigDecimal.valueOf(12));
 
         //since I have another constructor with no parameters, it is possible to create an object instance like this
         Video myVideo3 = new Video(3);
