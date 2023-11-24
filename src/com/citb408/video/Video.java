@@ -15,13 +15,14 @@ public class Video {
     //equal between different object instances
     public static BigDecimal maxDuration;
 
+    public int likes;
+    private Author author;
+
     //I create another constructor without parameters.
     //That makes available the option to create an object instance with the default constructor
-    public Video(int id) {
-        this.id = id;
-    }
+    //public Video() {}
 
-    public Video(int id, String n, BigDecimal d) {
+    public Video(int id, String n, BigDecimal d, int likes, Author author) {
         this.id = id;
         this.name = n;
 
@@ -29,6 +30,9 @@ public class Video {
         //this.duration = d;
         //or
         setDuration(d);
+
+        this.likes = likes;
+        this.author = author;
     }
 
     public int getId() {
@@ -82,6 +86,8 @@ public class Video {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", duration=" + duration +
+                ", likes=" + likes +
+                ", author=" + author +
                 '}';
     }
 }
