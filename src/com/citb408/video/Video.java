@@ -1,6 +1,7 @@
 package com.citb408.video;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 //Plain Old Java Object (POJO)
 public class Video {
@@ -18,11 +19,13 @@ public class Video {
     public int likes;
     private Author author;
 
+    public LocalDate uploadDate;
+
     //I create another constructor without parameters.
     //That makes available the option to create an object instance with the default constructor
     //public Video() {}
 
-    public Video(int id, String n, BigDecimal d, int likes, Author author) {
+    public Video(int id, String n, BigDecimal d, int likes, Author author, LocalDate uploadDate) {
         this.id = id;
         this.name = n;
 
@@ -33,6 +36,8 @@ public class Video {
 
         this.likes = likes;
         this.author = author;
+
+        this.uploadDate = uploadDate;
     }
 
     public int getId() {
@@ -88,6 +93,7 @@ public class Video {
                 ", duration=" + duration +
                 ", likes=" + likes +
                 ", author=" + author +
+                ", uploadDate=" + uploadDate +
                 '}';
     }
 }
